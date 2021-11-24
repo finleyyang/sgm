@@ -1,0 +1,13 @@
+/home/finley/Downloads/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/finley/CODE/sgm
+-- Found OpenCV: /usr/local (found version "4.5.4") 
+-- Build type: Release
+-- USING CXXFLAGS = '-g -O2 -fdebug-prefix-map=/build/cgal-ZyilPF/cgal-4.11=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -frounding-math -O3 -DNDEBUG'
+-- USING EXEFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -Wl,--as-needed '
+-- Targetting Unix Makefiles
+-- Using /usr/bin/c++ compiler.
+-- Requested component: MPFR
+-- Requested component: GMPXX
+-- Requested component: GMP
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/finley/CODE/sgm/build

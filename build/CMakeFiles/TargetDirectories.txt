@@ -1,0 +1,3 @@
+/home/finley/CODE/sgm/build/CMakeFiles/rebuild_cache.dir
+/home/finley/CODE/sgm/build/CMakeFiles/edit_cache.dir
+/home/finley/CODE/sgm/build/CMakeFiles/sgm.dir
