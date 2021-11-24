@@ -50,3 +50,7 @@ void Image::ImageRectify(Image imageleft, Image imageright,
     Qleft = Pleft * Qleft;
 }
 
+void Image::Depth2Dispairty() {
+
+}
+

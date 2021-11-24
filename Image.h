@@ -19,6 +19,8 @@ public:
     void ImageRectify(Image imageleft, Image imageright,std::vector<Eigen::Vector3d> pointsleft, std::vector<Eigen::Vector3d> pointsright,
                       Eigen::Matrix4d &Qleft, Eigen::Matrix3d &Hleft, Eigen::Matrix3d &Hright, cv::Mat &imageleftrecity, cv::Mat &imagerightrecity);
     cv::Size GetSize() const{return image.size();}
+
+    void Depth2Dispairty();
 };
 
 #endif //SGM_IMAGE_H

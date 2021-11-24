@@ -7,6 +7,9 @@
 
 void SGM::LoadImage() {
     depth = cv::Mat::zeros(imageleft.image.size(), CV_32S);
+    subpixelSteps = 4;
+    cv::Size size(imageleft.image.size().width-2 * halfWindowSizeX, imageleft.image.size().height-2 * halfWindowSizeY);
+    disparity = cv::Mat::zeros(size, CV_32S);
 }
 
 
@@ -94,4 +97,12 @@ bool SGM::PointinTrangle(const Eigen::Vector2d &A, const Eigen::Vector2d &B, con
     else if((u+v)<=1)
         return true;
     else return false;
+}
+
+void SGM::Depth2DisparityMap() {
+    for(int u = 0; u<disparity.cols; u++) {
+        for (int v = 0; v < disparity.rows; v++) {
+
+        }
+    }
 }

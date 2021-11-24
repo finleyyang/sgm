@@ -8,6 +8,7 @@
 #define INV_ZERO		(1e+14)
 #include <Eigen/Eigen>
 
+
 typedef Eigen::Matrix<double, 3, 4> PMatrix;
 typedef Eigen::Matrix3d RMatrix;
 typedef Eigen::Matrix3d KMatrix;
