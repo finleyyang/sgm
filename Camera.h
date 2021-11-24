@@ -52,6 +52,7 @@ public:
     Eigen::Vector2d TransformPointW2I(Eigen::Vector3d X);
     Eigen::Vector3d TransformPointW2I3(Eigen::Vector3d X);
     Eigen::Vector3d TransformPointI2C(Eigen::Vector3d X);
+    Eigen::Vector3d TransformPointI22C(Eigen::Vector2d X);
 
 
     void CameraRectifyROI(std::vector<Eigen::Vector3d> pointsleft, cv::Size &Size1, Camera camera1,

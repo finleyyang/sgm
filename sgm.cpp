@@ -28,7 +28,30 @@ void SGM::Rectify() {
 void SGM::DepthInit() {
     CGAL::Delaunay delaunay;
     TriangulatePointsDelaunay(delaunay);
+    for(CGAL::Delaunay::Face_iterator it=delaunay.faces_begin(); it!=delaunay.faces_end(); ++it){
+        const CGAL::Delaunay::Face& face = *it;
+        Eigen::Vector3d fi0(face.vertex(0)->point().x(), face.vertex(0)->point().y(), face.vertex(0)->point().z());
+        Eigen::Vector3d fi1(face.vertex(1)->point().x(), face.vertex(1)->point().y(), face.vertex(1)->point().z());
+        Eigen::Vector3d fi2(face.vertex(2)->point().x(), face.vertex(2)->point().y(), face.vertex(2)->point().z());
 
+        Eigen::Vector2d i0(fi0.x(), fi0.y());
+        Eigen::Vector2d i1(fi1.x(), fi1.y());
+        Eigen::Vector2d i2(fi2.x(), fi2.y());
+        for(int u = 0; u<imageleft.image.cols; u++) {
+            for (int v = 0; v < imageleft.image.rows; v++) {
+                Eigen::Vector2d I(u, v);
+                if(PointinTrangle(i0, i1, i2, I)){
+                    Plane Planef(imageleft.camera.TransformPointI2C(fi0),
+                                 imageleft.camera.TransformPointI2C(fi1),
+                                 imageleft.camera.TransformPointI2C(fi2));
+                    Eigen::Vector3d raydirection(imageleft.camera.TransformPointI22C(I));
+                    Ray Rayp(raydirection);
+                    Eigen::Vector3d pointinterset(Planef.Intersect(Rayp));
+                    depth.at<double>(u, v) = pointinterset.z();
+                }
+            }
+        }
+    }
 }
 
 std::pair<double, double> SGM::TriangulatePointsDelaunay(CGAL::Delaunay delaunay) {
@@ -59,5 +82,16 @@ bool SGM::PointinTrangle(const Eigen::Vector2d &A, const Eigen::Vector2d &B, con
     float dot00 = v0.dot(v0);
     float dot01 = v0.dot(v1);
     float dot02 = v0.dot(v2);
+    float dot11 = v1.dot(v1);
+    float dot12 = v1.dot(v2);
 
+    float u = (dot00 * dot02 - dot01 * dot12) / (dot00 * dot11 - dot01 * dot01);
+    float v = (dot00 * dot12 - dot01 * dot02) / (dot00 * dot11 - dot01 * dot01);
+    if(u<0||u>1)
+        return false;
+    else if(v<0||v>1)
+        return false;
+    else if((u+v)<=1)
+        return true;
+    else return false;
 }

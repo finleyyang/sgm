@@ -32,7 +32,14 @@ Eigen::Vector3d Camera::TransformPointW2I3(Eigen::Vector3d X){
     I3d(2) = camX(2);
     return I3d;
 };
-// 点从图像坐标转相机坐标
+//
+Eigen::Vector3d Camera::TransformPointI22C(Eigen::Vector2d X) {
+    Eigen::Vector3d x((X.x()-K(0,2))/K(0,0),
+                      (X.y()-K(1,2))/K(1,1),
+                      1);
+    return x.normalized();
+}
+// 点从图像坐标加深度转相机坐标
 Eigen::Vector3d Camera::TransformPointI2C(Eigen::Vector3d X) {
     Eigen::Vector3d x((X.x()-K(0,2))*X.z()/K(0,0),
                       (X.y()-K(1,2))*X.z()/K(1,1),
@@ -126,3 +133,5 @@ void Camera::SetCameraMatricesROI(const std::vector<Eigen::Vector2d> &roi1h, con
     K2(0,2) += size2.width /2-roi2h_center_x;
     K2(1,2) += size2.height/2-roi2h_center_y;
 }
+
+
