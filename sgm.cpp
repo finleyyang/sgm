@@ -36,6 +36,7 @@ std::pair<double, double> SGM::TriangulatePointsDelaunay(CGAL::Delaunay delaunay
     int size = points.size();
     for(int i = 0; i<size; i++){
         Eigen::Vector3d pt (imageleft.camera.TransformPointW2I3(points[i]));
+        //这里插入的是u，v和深度
         delaunay.insert(CGAL::Point(pt.x(), pt.y(), pt.z()));
         if(depthbounds.first > pt.z())
             depthbounds.first = pt.z();
@@ -43,41 +44,20 @@ std::pair<double, double> SGM::TriangulatePointsDelaunay(CGAL::Delaunay delaunay
             depthbounds.second = pt.z();
     }
     double avgdepth = (depthbounds.first + depthbounds.second)*0.5;
-    const CGAL::VertexHandle vcorners[]={
-            delaunay.insert(CGAL::Point(0, 0, avgdepth)),
-            delaunay.insert(CGAL::Point(imageleft.image.cols, 0, avgdepth)),
-            delaunay.insert(CGAL::Point(0, imageleft.image.rows, avgdepth)),
-            delaunay.insert(CGAL::Point(imageleft.image.cols, imageleft.image.rows, avgdepth))
-    };
-    const int numpoints = 3;
-    for(int i = 0; i< 4; i++){
-        const CGAL::VertexHandle vcorner = vcorners[i];
-        CGAL::FaceCirculator cfc(delaunay.incident_faces(vcorner));
-        if(cfc == 0)
-            continue;
-        const CGAL::FaceCirculator done(cfc);
-        Eigen::Vector3d poszA(vcorner->point().x(), vcorner->point().y(), vcorner->point().z());
-        Eigen::Vector2d posA(vcorner->point().x(), vcorner->point().y());
-        //Eigen::Vector3d rayA(imageleft.camera.TransformPointI2C(poszA));
-        const Ray rayA(imageleft.camera.TransformPointI2C(poszA));
-        do{
-            CGAL::FaceHandle fc(cfc->neighbor(cfc->index(vcorner)));
-            if(fc == delaunay.infinite_face())
-                continue;
-            for(int j = 0; j<4;j++)
-                if(fc->has_vertex(vcorners[j]))
-                    goto Continue;
-            {
-                const Eigen::Vector3d poszB0 (fc->vertex(0)->point().x(), fc->vertex(0)->point().y(), fc->vertex(0)->point().z());
-                const Eigen::Vector3d poszB1 (fc->vertex(0)->point().x(), fc->vertex(0)->point().y(), fc->vertex(0)->point().z());
-                const Eigen::Vector3d poszB2 (fc->vertex(0)->point().x(), fc->vertex(0)->point().y(), fc->vertex(0)->point().z());
-                Plane planeB(poszB0, poszB1, poszB2);
-                const Eigen::Vector3d poszB(planeB.Intersect(rayA));
-                if(poszB.z()<=0)
-                    continue;
+    delaunay.insert(CGAL::Point(0, 0, avgdepth));
+    delaunay.insert(CGAL::Point(imageleft.image.cols, 0, avgdepth));
+    delaunay.insert(CGAL::Point(0, imageleft.image.rows, avgdepth));
+    delaunay.insert(CGAL::Point(imageleft.image.cols, imageleft.image.rows, avgdepth));
 
-            }
-            Continue:;
-        }while(++cfc!=done);
-    }
+}
+
+bool SGM::PointinTrangle(const Eigen::Vector2d &A, const Eigen::Vector2d &B, const Eigen::Vector2d &C, const Eigen::Vector2d &P) {
+    Eigen::Vector2d v0 = C - A;
+    Eigen::Vector2d v1 = B - A;
+    Eigen::Vector2d v2 = P - A;
+
+    float dot00 = v0.dot(v0);
+    float dot01 = v0.dot(v1);
+    float dot02 = v0.dot(v2);
+
 }

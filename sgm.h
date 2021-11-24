@@ -11,6 +11,8 @@
 #include <CGAL/Delaunay_triangulation_2.h>
 #include <CGAL/Projection_traits_xy_3.h>
 
+#include <math.h>
+
 #include "Image.h"
 #include "Plane.h"
 #include "Ray.h"
@@ -51,6 +53,7 @@ public:
     void Rectify();
     void DepthInit();
     std::pair<double, double> TriangulatePointsDelaunay(CGAL::Delaunay delaunay);
+    bool PointinTrangle(const Eigen::Vector2d &A, const Eigen::Vector2d &B, const Eigen::Vector2d &C, const Eigen::Vector2d &P);
 };
 
 
