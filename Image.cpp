@@ -50,7 +50,12 @@ void Image::ImageRectify(Image imageleft, Image imageright,
     Qleft = Pleft * Qleft;
 }
 
-void Image::Depth2Dispairty() {
-
+bool Image::Depth2Disparity(double d, Eigen::Matrix4d Qinv, Eigen::Vector2d u, double &disparity) {
+    const double w((Qinv(3,0)*u.x()*d + Qinv(3,1)*u.y()*d + Qinv(3,2))*d + Qinv(3,3));
+    if (ISZERO(w))
+        return false;
+    const double z((Qinv(2,0)*u.x()*d + Qinv(2,1)*u.y()*d + Qinv(2,2))*d + Qinv(2,3));
+    disparity = -(float)(z/w);
+    return true;
 }
 

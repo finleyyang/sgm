@@ -64,6 +64,7 @@ Camera::CameraRectify(cv::Size sizeleft, Camera cameraleft, cv::Size sizeright, 
     // 新的x轴，基线方向
     const Eigen::Vector3d e1(cameraright.C - cameraleft.C);
     // 新的y轴，垂直旧的Z轴（光轴）和新的X轴
+    // 方向先指向direction,然后e1
     const Eigen::Vector3d e2(cameraleft.Direction().cross(e1));
     // 新的Z轴，垂直上面两个新轴
     const Eigen::Vector3d e3(e1.cross(e2));
@@ -94,7 +95,7 @@ Camera::CameraRectifyROI(std::vector<Eigen::Vector3d> pointsleft, cv::Size &Size
     SetCameraMatricesROI(roi1h, roi2h, Size1, Size2, K1, K2);
 }
 
-//这里的 point 是[x/z, y/z, z]
+//这里的 point 是[u, v, z]
 void Camera::GetImagePairROI(const std::vector<Eigen::Vector3d> &pointsleft,const RMatrix &R1, const KMatrix &K1,
                              const std::vector<Eigen::Vector3d> &pointsright, const RMatrix &R2, const KMatrix &K2,
                              const KMatrix &invK1, const KMatrix &invK2, std::vector<Eigen::Vector2d> &roi1h, std::vector<Eigen::Vector2d> &roi2h){
@@ -108,8 +109,8 @@ void Camera::GetImagePairROI(const std::vector<Eigen::Vector3d> &pointsleft,cons
     const Eigen::Matrix3d H2(K2 * R2 * invK2);
     int size = pointsleft.size();
     for(int i = 0; i < size; i++){
-        Eigen::Vector3d X1 = pointsleft[i];
-        Eigen::Vector3d X2 = pointsright[i];
+        Eigen::Vector2d X1(pointsleft[i].x(), pointsleft[i].y());
+        Eigen::Vector2d X2(pointsright[i].x(), pointsleft[i].y());
         Eigen::Vector2d x1, x2;
         ProjectVertex_3x3_2_2(H1, X1, x1);
         roi1h.push_back(x1);

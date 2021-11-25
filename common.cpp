@@ -11,6 +11,10 @@ double INVERT(double x){
         return INV_ZERO;
 }
 
+bool ISZERO(double x){
+    return abs(x) < ZERO_TOLERANCE;
+}
+
 double MAXVALUE(double x1, double x2){return x1 > x2? x1 : x2;}
 
 double MINVALUE(double x1, double x2){return x1 < x2? x1 : x2;}
@@ -32,7 +36,7 @@ int ROUND2INT(double x){
     return int(floor(x+0.5f));
 }
 
-void ProjectVertex_3x3_2_2(const Eigen::Matrix3d &H, const Eigen::Vector3d &X, Eigen::Vector2d &pt){
+void ProjectVertex_3x3_2_2(const Eigen::Matrix3d &H, const Eigen::Vector2d &X, Eigen::Vector2d &pt){
     double Zinv = INVERT(H(2, 0) * X[0] + H(2, 1) * X[1] + H(2, 2));
     pt[0] = (H(0,0) * X[0] + H(0, 1) * X[1] + H(0, 2)) * Zinv;
     pt[1] = (H(1,0) * X[0] + H(1, 1) * X[1] + H(1, 2)) * Zinv;

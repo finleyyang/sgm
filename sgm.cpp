@@ -102,7 +102,14 @@ bool SGM::PointinTrangle(const Eigen::Vector2d &A, const Eigen::Vector2d &B, con
 void SGM::Depth2DisparityMap() {
     for(int u = 0; u<disparity.cols; u++) {
         for (int v = 0; v < disparity.rows; v++) {
-
+            //x 是校正后的图像上的点， u是校正前的
+            Eigen::Vector2d x(u, v);
+            Eigen::Vector2d U;
+            ProjectVertex_3x3_2_2(Hleft.inverse(), x, U);
+            double d = depth.at<double>(U.x(), U.y());
+            double disparityvalue;
+            imageleft.Depth2Disparity(d, Qleft.inverse(), U, disparityvalue);
+            disparity.at<double>(u, v) = ROUND2INT(disparityvalue * subpixelSteps);
         }
     }
 }

@@ -20,7 +20,7 @@ public:
                       Eigen::Matrix4d &Qleft, Eigen::Matrix3d &Hleft, Eigen::Matrix3d &Hright, cv::Mat &imageleftrecity, cv::Mat &imagerightrecity);
     cv::Size GetSize() const{return image.size();}
 
-    void Depth2Dispairty();
+    bool Depth2Disparity(double d, Eigen::Matrix4d Qinv, Eigen::Vector2d u, double &disparity);
 };
 
 #endif //SGM_IMAGE_H
