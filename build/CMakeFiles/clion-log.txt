@@ -1,14 +1,25 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /Users/finley/Desktop/course/CODE/sgm
--- Using header-only CGAL
--- Targetting Unix Makefiles
--- Using /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ compiler.
--- DARWIN_VERSION=21
--- Mac Leopard detected
--- Boost include dirs: /usr/local/include
--- Boost libraries:    
+/home/finley/Downloads/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/finley/CODE/sgm
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /usr/local (found version "4.5.4") 
 -- Build type: Release
--- USING CXXFLAGS = ' -O3 -DNDEBUG'
--- USING EXEFLAGS = ' '
+-- USING CXXFLAGS = '-g -O2 -fdebug-prefix-map=/build/cgal-ZyilPF/cgal-4.11=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -frounding-math -O3 -DNDEBUG'
+-- USING EXEFLAGS = '-Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -Wl,--as-needed '
+-- Targetting Unix Makefiles
+-- Using /usr/bin/c++ compiler.
+-- Requested component: MPFR
+-- Requested component: GMPXX
+-- Requested component: GMP
 -- Configuring done
 -- Generating done
--- Build files have been written to: /Users/finley/Desktop/course/CODE/sgm/build
+-- Build files have been written to: /home/finley/CODE/sgm/build

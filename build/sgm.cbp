@@ -5,222 +5,186 @@
 		<Option title="sgm"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.76.0\;CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\;CMake Files\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/finley/Desktop/course/CODE/sgm/build"/>
+				<Option working_dir="/home/finley/CODE/sgm/build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sgm">
-				<Option output="/Users/finley/Desktop/course/CODE/sgm/build/sgm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/finley/Desktop/course/CODE/sgm/build"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCGAL_USE_GMPXX=1"/>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add directory="/Users/finley/Desktop/course/CODE/sgm/build"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/usr/local/Cellar/opencv/4.5.3_3/include/opencv4"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 sgm"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sgm/fast">
-				<Option output="/Users/finley/Desktop/course/CODE/sgm/build/sgm" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/finley/Desktop/course/CODE/sgm/build"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DCGAL_USE_GMPXX=1"/>
-					<Add option="-DBOOST_ALL_NO_LIB"/>
-					<Add directory="/Users/finley/Desktop/course/CODE/sgm/build"/>
-					<Add directory="/usr/local/include/eigen3"/>
-					<Add directory="/usr/local/Cellar/opencv/4.5.3_3/include/opencv4"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 sgm/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/Users/finley/Desktop/course/CODE/sgm/build"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/finley/Desktop/course/CODE/sgm/build"/>
+				<Option working_dir="/home/finley/CODE/sgm/build"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/finley/Desktop/course/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/finley/CODE/sgm/build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sgm">
+				<Option output="/home/finley/CODE/sgm/build/sgm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/finley/CODE/sgm/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCGAL_USE_MPFR"/>
+					<Add option="-DCGAL_USE_GMPXX"/>
+					<Add option="-DCGAL_USE_GMP"/>
+					<Add directory="/home/finley/CODE/sgm/build"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 sgm"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sgm/fast">
+				<Option output="/home/finley/CODE/sgm/build/sgm" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/finley/CODE/sgm/build"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DCGAL_USE_MPFR"/>
+					<Add option="-DCGAL_USE_GMPXX"/>
+					<Add option="-DCGAL_USE_GMP"/>
+					<Add directory="/home/finley/CODE/sgm/build"/>
+					<Add directory="/usr/local/include/eigen3"/>
+					<Add directory="/usr/local/include/opencv4"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 sgm/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/home/finley/CODE/sgm/build/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Camera.cpp">
+		<Unit filename="/home/finley/CODE/sgm/Camera.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Camera.h">
+		<Unit filename="/home/finley/CODE/sgm/Camera.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Image.cpp">
+		<Unit filename="/home/finley/CODE/sgm/Image.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Image.h">
+		<Unit filename="/home/finley/CODE/sgm/Image.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Plane.cpp">
+		<Unit filename="/home/finley/CODE/sgm/Plane.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Plane.h">
+		<Unit filename="/home/finley/CODE/sgm/Plane.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Ray.cpp">
+		<Unit filename="/home/finley/CODE/sgm/Ray.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/Ray.h">
+		<Unit filename="/home/finley/CODE/sgm/Ray.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/common.cpp">
+		<Unit filename="/home/finley/CODE/sgm/common.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/common.h">
+		<Unit filename="/home/finley/CODE/sgm/common.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/main.cpp">
+		<Unit filename="/home/finley/CODE/sgm/main.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/sgm.cpp">
+		<Unit filename="/home/finley/CODE/sgm/sgm.cpp">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/sgm.h">
+		<Unit filename="/home/finley/CODE/sgm/sgm.h">
 			<Option target="sgm"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/CMakeLists.txt">
+		<Unit filename="/home/finley/CODE/sgm/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGALConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGALConfigBuildVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGALConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_Common.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALExports.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_CreateSingleSourceCGALProgram.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGALLibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_GeneratorSpecificSettings.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_Common.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_Macros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_GeneratorSpecificSettings.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_SCM.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_Macros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_SetupBoost.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_SetupFlags.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_SetupCGALDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_TweakFindBoost.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_SetupGMP.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/CGAL_VersionUtils.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_TweakFindBoost.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_VersionUtils.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_add_test.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_display_flags.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_enable_end_of_configuration_hook.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_setup_target_dependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/CGAL_target_use_TBB.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/FindGMP.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/FindGMPXX.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/FindMPFR.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/CGAL/UseCGAL.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\CGAL\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/Boost-1.76.0/BoostConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.76.0\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/Boost-1.76.0/BoostConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\Boost-1.76.0\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/boost_headers-1.76.0/boost_headers-config-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\"/>
-		</Unit>
-		<Unit filename="/Users/finley/Desktop/course/CODE/sgm/../../../../../../usr/local/lib/cmake/boost_headers-1.76.0/boost_headers-config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\local\lib\cmake\boost_headers-1.76.0\"/>
+		<Unit filename="/home/finley/CODE/sgm/../../../../usr/lib/x86_64-linux-gnu/cmake/CGAL/UseCGAL.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\CGAL\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
