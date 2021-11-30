@@ -29,7 +29,7 @@ void Image::ImageRectify(Image imageleft, Image imageright,
     cv::warpPerspective(imageleft.image, imageleftrecity, H1mat, imageleftrecity.size());
     imagerightrecity.create(size2, imageright.image.type());
     cv::warpPerspective(imageright.image, imagerightrecity, H2mat, imagerightrecity.size());
-    Qleft=  Eigen::Matrix4d::Zero();
+    Qleft.setZero();
     Eigen::Matrix4d Pleft = Eigen::Matrix4d::Identity();
     // Q * 矫正后的图像坐标以及视差值 = 矫正前的相机坐标以及深度值
     //                                     |1,  0,  0    ,       -cx|

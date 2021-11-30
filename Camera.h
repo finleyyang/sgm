@@ -9,6 +9,7 @@
 #include <opencv2/core.hpp>
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/eigen.hpp>
+#include <utility>
 
 #include "common.h"
 
@@ -24,7 +25,7 @@ private:
 
 public:
 
-    Camera(RMatrix _R, KMatrix _K) : R(_R), K(std::move(_K)){};
+    Camera(RMatrix _R, KMatrix _K) : R(std::move(_R)), K(std::move(_K)){};
     ~Camera(){};
     void SetT(const Eigen::Vector3d & T) { t = T; C = R.inverse() * (-T); }
     void SetC(const Eigen::Vector3d & _C) { C = _C; t = R * (-C);}
