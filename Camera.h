@@ -4,7 +4,8 @@
 
 #ifndef SGM_CAMERA_H
 #define SGM_CAMERA_H
-#include <Eigen/Dense>
+
+#include <eigen3/Eigen/Dense>
 
 #include <opencv2/core.hpp>
 #include <opencv2/opencv.hpp>

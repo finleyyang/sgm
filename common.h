@@ -7,7 +7,7 @@
 
 #define INV_ZERO		(1e+14)
 #define ZERO_TOLERANCE	(1e-7)
-#include <Eigen/Eigen>
+#include <eigen3/Eigen/Eigen>
 
 
 typedef Eigen::Matrix<double, 3, 4> PMatrix;

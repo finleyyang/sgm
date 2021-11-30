@@ -4,7 +4,7 @@
 
 #ifndef SGM_RAY_H
 #define SGM_RAY_H
-#include <Eigen/Eigen>
+#include <eigen3/Eigen/Eigen>
 
 typedef Eigen::Vector3d Point;
 typedef Eigen::Vector3d Vector;
